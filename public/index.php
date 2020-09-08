@@ -3,7 +3,11 @@
 require "../bootstrap.php";
 
 use App\Classes\Layout;
+use App\Classes\Uri;
+use App\Classes\Route;
 
 $layout = new Layout;
-$layout->add('site.login');
+
+require Route::getRoute(Uri::getUri(), $routes);
+
 require $layout->master('layout');
