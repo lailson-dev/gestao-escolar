@@ -36,7 +36,22 @@
     </nav>
 
     <div class="container d-flex flex-column justify-content-center align-items-center">
-        <h1 class="display-4">Gestão Escolar</h1>
-        <p class="lead">Simplificando a vida!</p>
+        <h1 class="display-4">Cadastro de Professores</h1>
+    </div>
+</section>
+
+<section class="container">
+    <div class="row d-flex flex-column justify-content-center align-items-center">
+        <!-- Formulário de Professores -->
+        <div class="col-md-6">
+            <form action="" method="POST">
+                <div class="form-group">
+                    <label for="input-name">Nome</label>
+                    <input type="text" class="form-control" id="input-name" name="input-name"
+                           placeholder="Informe o nome do(a) professor(a)">
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>
     </div>
 </section>

@@ -8,7 +8,7 @@
 <section class="container">
     <div class="row d-flex justify-content-center align-items-center">
         <div class="col-md-6">
-            <form>
+            <form method="POST" action="/login">
                 <div class="form-group">
                     <label for="input-username">Endereço de email</label>
                     <input type="email" class="form-control" id="input-username" name="input-username"

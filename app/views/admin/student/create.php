@@ -36,7 +36,43 @@
     </nav>
 
     <div class="container d-flex flex-column justify-content-center align-items-center">
-        <h1 class="display-4">Gestão Escolar</h1>
-        <p class="lead">Simplificando a vida!</p>
+        <h1 class="display-4">Cadastro de Alunos</h1>
+    </div>
+</section>
+
+<section class="container">
+    <div class="row d-flex flex-column justify-content-center align-items-center">
+        <div class="col-md-8">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="input-name">Nome</label>
+                        <input type="text" class="form-control" id="input-name" name="input-name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="input-email-responsible">Responsável</label>
+                        <input type="email" class="form-control" id="input-email-responsible"
+                               name="input-email-responsible">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="input-serie">Série</label>
+                        <select id="input-serie" name="input-serie" class="form-control">
+                            <option selected></option>
+                            <option>5º Série</option>
+                            <option>1º Ano</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="input-name-room">Sala</label>
+                        <select id="input-name-room" name="input-name-room" class="form-control">
+                            <option selected></option>
+                            <option>19C Térrio</option>
+                            <option>15A 1º Andar</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>
     </div>
 </section>

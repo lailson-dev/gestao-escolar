@@ -36,7 +36,26 @@
     </nav>
 
     <div class="container d-flex flex-column justify-content-center align-items-center">
-        <h1 class="display-4">Gestão Escolar</h1>
-        <p class="lead">Simplificando a vida!</p>
+        <h1 class="display-4">Cadastro de Turmas</h1>
+    </div>
+</section>
+
+<section class="container">
+    <div class="row d-flex flex-column justify-content-center align-items-center">
+        <!-- Formulário de Turmas -->
+        <div class="col-md-6">
+            <form action="" method="POST">
+                <div class="form-group">
+                    <label for="input-room">Sala</label>
+                    <input type="text" class="form-control" id="input-room" name="input-room"
+                           placeholder="Nº da Sala">
+                </div>
+                <div class="form-group">
+                    <label for="grade">Série</label>
+                    <input type="text" class="form-control" id="grade" name="input-grade" placeholder="Série">
+                </div>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>
     </div>
 </section>

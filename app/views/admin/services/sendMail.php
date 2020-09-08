@@ -36,7 +36,27 @@
     </nav>
 
     <div class="container d-flex flex-column justify-content-center align-items-center">
-        <h1 class="display-4">Gestão Escolar</h1>
-        <p class="lead">Simplificando a vida!</p>
+
+        <h1 class="display-4">Informar aos Pais</h1>
+        <p class="lead">Os e-mails listados abaixo são selecionados automaticamente do banco de dados.</p>
+        <p class="lead text-center">Ao carregar esta página, é realizado automaticamente uma consulta no banco de
+            dados
+            retornando todos os alunos que faltaram na data de hoje. Listando assim, o responsável de cada aluno
+            para o envio do e-mail.</p>
+    </div>
+</section>
+
+<section class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="" method="POST">
+                <div class="form-group">
+                    <label for="textarea-responsibles">E-mails</label>
+                    <textarea class="form-control" name="textarea-responsibles" id="textarea-responsibles" cols="30"
+                              rows="10"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Comunicar</button>
+            </form>
+        </div>
     </div>
 </section>
