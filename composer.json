@@ -6,5 +6,8 @@
       "App\\Models\\": "app\\models",
       "App\\Classes\\": "app\\classes"
     }
+  },
+  "require": {
+    "acarajetech/datasave": "v1.0.3"
   }
 }

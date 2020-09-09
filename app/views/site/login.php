@@ -10,8 +10,8 @@
         <div class="col-md-6">
             <form method="POST" action="/login">
                 <div class="form-group">
-                    <label for="input-username">Endereço de email</label>
-                    <input type="email" class="form-control" id="input-username" name="input-username"
+                    <label for="input-mail">Endereço de email</label>
+                    <input type="email" class="form-control" id="input-mail" name="input-mail"
                            aria-describedby="emailHelp" placeholder="Seu email">
                     <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com
                         ninguém.</small>
