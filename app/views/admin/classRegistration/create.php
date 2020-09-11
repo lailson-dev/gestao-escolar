@@ -44,7 +44,7 @@
     <div class="row d-flex flex-column justify-content-center align-items-center">
         <!-- Formulário de Turmas -->
         <div class="col-md-6">
-            <form action="" method="POST">
+            <form action="/class/store" method="POST">
                 <div class="form-group">
                     <label for="input-room">Sala</label>
                     <input type="text" class="form-control" id="input-room" name="input-room"

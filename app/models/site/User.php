@@ -13,11 +13,11 @@ class User extends DataSave
         $password = $data['password'];
         unset($data['password']);
 
-        $response = $this->findById('mail=:mail', $data);
+        $response = $this->find('mail=:mail', $data);
         return password_verify($password, $response->password);
     }
 
-    public function findById(?string $where = null, array $values, ?string $fields = '*'): ?\stdClass
+    public function find(?string $where = null, array $values, ?string $fields = '*'): ?\stdClass
     {
         try {
             $sql = "SELECT {$fields} FROM {$this->table} WHERE {$where}";
