@@ -19,6 +19,6 @@ if ($arrayPost) {
     if (!in_array('', $roomName)) {
         $room->save($roomName);
     }
-
-    return header('Location: /cadastrar/turma');
 }
+
+return header('Location: /cadastrar/turma');

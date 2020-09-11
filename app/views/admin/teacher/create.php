@@ -44,13 +44,30 @@
     <div class="row d-flex flex-column justify-content-center align-items-center">
         <!-- Formulário de Professores -->
         <div class="col-md-6">
-            <form action="" method="POST">
+            <form action="/teacher/store" method="POST">
                 <div class="form-group">
-                    <label for="input-name">Nome</label>
-                    <input type="text" class="form-control" id="input-name" name="input-name"
+                    <label for="name">Nome</label>
+                    <input type="text" class="form-control" id="name" name="name"
                            placeholder="Informe o nome do(a) professor(a)">
                 </div>
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <div class="form-group">
+                    <p>Selecione uma ou mais matéria</p>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="check-portuguese" name="discipline[]" value="Português">
+                    <label class="form-check-label" for="check-portuguese">Português</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="check-mathematics" name="discipline[]" value="Matemática">
+                    <label class="form-check-label" for="check-mathematics">Matemática</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="check-history" name="discipline[]" value="História">
+                    <label class="form-check-label" for="check-history">História</label>
+                </div>
+                <div class="form-group mt-3">
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </div>
             </form>
         </div>
     </div>
