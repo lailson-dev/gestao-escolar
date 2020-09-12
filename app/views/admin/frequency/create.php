@@ -43,43 +43,44 @@
 <section class="container">
     <div class="row d-flex flex-column justify-content-center align-items-center">
         <div class="col-md-12">
-            <form>
+            <form action="/frequency/store" method="POST">
                 <div class="form-row">
                     <div class="form-group col-md-2">
                         <label for="input-id">Matrícula</label>
-                        <input type="text" class="form-control" id="input-id" name="input-id" value="1" disabled>
+                        <input type="text" class="form-control" id="input-id" name="id_student" value="" disabled>
                     </div>
                     <div class="form-group col-md-10">
                         <label for="input-name">Aluno</label>
-                        <input type="text" class="form-control" id="input-name" name="input-name"
-                               value="Lailson Conceição" disabled>
+                        <input type="text" class="form-control" id="input-name" value="" disabled>
                     </div>
                     <div class="form-group col-md-2">
                         <label for="input-data">Data</label>
-                        <input type="date" class="form-control" id="input-data" name="input-data">
+                        <input type="date" class="form-control" id="input-data" name="date">
                     </div>
                     <div class="form-check form-check-inline col-md-1">
-                        <input class="form-check-input" type="radio" name="radio-presence" id="present" value="1">
+                        <input class="form-check-input" type="radio" name="status" id="present" value="1">
                         <label class="form-check-label" for="present">Presente</label>
                     </div>
                     <div class="form-check form-check-inline col-md-1">
-                        <input class="form-check-input" type="radio" name="radio-presence" id="absent" value="0">
+                        <input class="form-check-input" type="radio" name="status" id="absent" value="0">
                         <label class="form-check-label" for="absent">Ausente</label>
                     </div>
                     <div class="form-group col-md-2">
                         <label for="input-discipline">Disciplina</label>
-                        <select id="input-discipline" name="input-discipline" class="form-control">
-                            <option selected></option>
-                            <option>Português</option>
-                            <option>Matemática</option>
+                        <select id="input-discipline" name="id_discipline" class="form-control">
+                            <option selected>Escolha...</option>
+                            <?php foreach ($disciplines as $discipline): ?>
+                                <option value="<?= $discipline->id; ?>"><?= $discipline->name; ?></option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
                     <div class="form-group col-md-2">
                         <label for="input-name-teacher">Professor</label>
-                        <select id="input-name-teacher" name="input-name-teacher" class="form-control">
-                            <option selected></option>
-                            <option>Carlos Santos</option>
-                            <option>Tiago Almeida</option>
+                        <select id="input-name-teacher" name="id_teacher" class="form-control">
+                            <option selected>Escolha...</option>
+                            <?php foreach ($teachers as $teacher): ?>
+                                <option value="<?= $teacher->id; ?>"><?= $teacher->full_name; ?></option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
                     <div class="form-group col-md-2">
@@ -93,34 +94,28 @@
 
     <div class="row">
         <div class="col-md-12">
-            <table class="table">
+            <table class="table table-striped">
                 <thead>
                 <tr>
                     <th scope="col">Matrícula</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Responsável</th>
+                    <th scope="col">Série</th>
                     <th scope="col">Sala</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th>1</th>
-                    <td>Mark</td>
-                    <td>Otto@gmail.com</td>
-                    <td>19C Térrio</td>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <td>Jacob</td>
-                    <td>Otto@gmail.com</td>
-                    <td>15A 1º Andar</td>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <td>Larry</td>
-                    <td>Otto@gmail.com</td>
-                    <td>12A Térrio</td>
-                </tr>
+                <?php foreach ($students as $student): ?>
+                    <tr>
+                        <td><?= $student->id; ?></td>
+                        <td>
+                            <a href="#"><?= $student->full_name; ?></a>
+                        </td>
+                        <td><?= $student->responsible; ?></td>
+                        <td><?= $student->id_serie; ?></td>
+                        <td><?= $student->id_room; ?></td>
+                    </tr>
+                <?php endforeach; ?>
                 </tbody>
             </table>
         </div>
