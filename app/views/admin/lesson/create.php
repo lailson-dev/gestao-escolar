@@ -43,50 +43,54 @@
 <section class="container">
     <div class="row d-flex flex-column justify-content-center align-items-center">
         <div class="col-md-6">
-            <form>
+            <form action="/lesson/store" method="POST">
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="input-data">Data</label>
-                        <input type="date" class="form-control" id="input-data" name="input-data">
+                        <input type="date" class="form-control" id="input-data" name="date">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="input-discipline">Disciplina</label>
-                        <select id="input-discipline" name="input-discipline" class="form-control">
-                            <option selected></option>
-                            <option>Português</option>
-                            <option>Matemática</option>
+                        <select id="input-discipline" name="id_discipline" class="form-control">
+                            <option selected>Escolha...</option>
+                            <?php foreach ($disciplines as $discipline): ?>
+                                <option value="<?= $discipline->id; ?>"><?= $discipline->name; ?></option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="input-name-teacher">Professor</label>
-                        <select id="input-name-teacher" name="input-name-teacher" class="form-control">
-                            <option selected></option>
-                            <option>Carlos Santos</option>
-                            <option>Tiago Almeida</option>
+                        <select id="input-name-teacher" name="id_teacher" class="form-control">
+                            <option selected>Escolha...</option>
+                            <?php foreach ($teachers as $teacher): ?>
+                                <option value="<?= $teacher->id; ?>"><?= $teacher->full_name; ?></option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="input-entry-time">Entrada</label>
-                        <input type="time" class="form-control" id="input-entry-time" name="input-entry-time">
+                        <input type="time" class="form-control" id="input-entry-time" name="entry_hours">
                     </div>
                     <div class="form-group col-md-3">
                         <label for="input-exit-time">Saída</label>
-                        <input type="time" class="form-control" id="input-exit-time" name="input-exit-time">
+                        <input type="time" class="form-control" id="input-exit-time" name="exit_hours">
                     </div>
                     <div class="form-group col-md-3">
                         <label for="input-serie">Série</label>
-                        <select id="input-serie" name="input-serie" class="form-control">
-                            <option selected></option>
-                            <option>5º Série</option>
-                            <option>1º Ano</option>
+                        <select id="input-serie" name="id_serie" class="form-control">
+                            <option selected>Escolha...</option>
+                            <?php foreach ($series as $serie): ?>
+                                <option value="<?= $serie->id; ?>"><?= $serie->name; ?></option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="input-name-room">Sala</label>
-                        <select id="input-name-room" name="input-name-room" class="form-control">
-                            <option selected></option>
-                            <option>19C Térrio</option>
-                            <option>15A 1º Andar</option>
+                        <select id="input-name-room" name="id_room" class="form-control">
+                            <option selected>Escolha...</option>
+                            <?php foreach ($rooms as $room): ?>
+                                <option value="<?= $room->id; ?>"><?= $room->name; ?></option>
+                            <?php endforeach; ?>
                         </select>
                     </div>
                 </div>
