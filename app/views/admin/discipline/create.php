@@ -44,10 +44,10 @@
     <div class="row d-flex flex-column justify-content-center align-items-center">
         <!-- Formulário de Professores -->
         <div class="col-md-6">
-            <form action="" method="POST">
+            <form action="/discipline/store" method="POST">
                 <div class="form-group">
-                    <label for="input-name">Matéria:</label>
-                    <input type="text" class="form-control" id="input-name" name="input-name"
+                    <label for="name">Matéria:</label>
+                    <input type="text" class="form-control" id="name" name="name"
                            placeholder="Informe a disciplina">
                 </div>
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
