@@ -53,18 +53,14 @@
                 <div class="form-group">
                     <p>Selecione uma ou mais matéria</p>
                 </div>
+
+                <?php foreach ($disciplines as $discipline): ?>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="check-portuguese" name="discipline[]" value="Português">
-                    <label class="form-check-label" for="check-portuguese">Português</label>
+                    <input class="form-check-input" type="checkbox" id="check-<?= $discipline->slug; ?>" name="discipline[]" value="<?= $discipline->slug; ?>">
+                    <label class="form-check-label" for="check-<?= $discipline->slug; ?>"><?= $discipline->name; ?></label>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="check-mathematics" name="discipline[]" value="Matemática">
-                    <label class="form-check-label" for="check-mathematics">Matemática</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="check-history" name="discipline[]" value="História">
-                    <label class="form-check-label" for="check-history">História</label>
-                </div>
+                <?php endforeach; ?>
+
                 <div class="form-group mt-3">
                     <button type="submit" class="btn btn-primary">Cadastrar</button>
                 </div>
