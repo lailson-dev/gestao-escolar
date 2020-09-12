@@ -8,6 +8,7 @@
     }
   },
   "require": {
-    "acarajetech/datasave": "v1.0.3"
+    "acarajetech/datasave": "v1.0.3",
+    "ext-iconv": "^7.4"
   }
 }
