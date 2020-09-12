@@ -12,8 +12,8 @@
             </button>
             <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                 <a class="dropdown-item" href="/cadastrar/turma">Turma</a>
-                <a class="dropdown-item" href="/cadastrar/professor">Professor</a>
                 <a class="dropdown-item" href="/cadastrar/disciplina">Disciplina</a>
+                <a class="dropdown-item" href="/cadastrar/professor">Professor</a>
                 <a class="dropdown-item" href="/cadastrar/aula">Aula</a>
                 <a class="dropdown-item" href="/cadastrar/aluno">Aluno</a>
                 <a class="dropdown-item" href="/cadastrar/frequencia">Frequência</a>
