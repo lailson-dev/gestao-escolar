@@ -37,21 +37,23 @@
 
     <div class="container d-flex flex-column justify-content-center align-items-center">
         <h1 class="display-4">Listagem de Alunos</h1>
+        <p class="lead">Para procurar informe a matrícula ou o RG do aluno ou responsável</p>
     </div>
 </section>
 
 <section class="container">
     <div class="row">
         <div class="col md-12">
-            <form>
+            <form action="/student/find" method="POST">
                 <div class="form-row">
                     <div class="form-group col-md-2">
                         <label for="input-id">Matrícula</label>
-                        <input type="text" class="form-control" id="input-id" name="input-id" value="1" disabled>
+                        <input type="text" class="form-control" id="input-id" name="id">
                     </div>
                     <div class="form-group col-md-8">
-                        <label for="input-name">Aluno</label>
-                        <input type="text" class="form-control" id="input-name" name="input-name">
+                        <label for="input-rg">RG</label>
+                        <input type="text" class="form-control" id="input-rg" name="rg"
+                               placeholder="Informe o RG do Aluno ou Responsável">
                     </div>
                     <div class="form-group col-md-2">
                         <label for="input-name">ㅤ</label>
@@ -67,29 +69,23 @@
                 <tr>
                     <th scope="col">Matrícula</th>
                     <th scope="col">Nome</th>
+                    <th scope="col">RG</th>
                     <th scope="col">Responsável</th>
+                    <th scope="col">Série</th>
                     <th scope="col">Sala</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th>1</th>
-                    <td><a href="#">Mark</a></td>
-                    <td>Otto@gmail.com</td>
-                    <td>19C Térrio</td>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <td><a href="#">Jacob</a></td>
-                    <td>Otto@gmail.com</td>
-                    <td>15A 1º Andar</td>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <td><a href="#">Larry</a></td>
-                    <td>Otto@gmail.com</td>
-                    <td>12A Térrio</td>
-                </tr>
+                <?php foreach ($students as $student): ?>
+                    <tr class="list-students">
+                        <td><?= $student->id; ?></td>
+                        <td><?= $student->full_name; ?></td>
+                        <td><?= $student->rg; ?></td>
+                        <td><?= $student->responsible; ?></td>
+                        <td><?= $student->id_serie; ?></td>
+                        <td><?= $student->id_room; ?></td>
+                    </tr>
+                <?php endforeach; ?>
                 </tbody>
             </table>
         </div>

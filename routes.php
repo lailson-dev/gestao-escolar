@@ -24,4 +24,6 @@ $routes = [
     '/lesson/store' => 'admin/create/lesson/StoreController',
     '/student/store' => 'admin/create/student/StoreController',
     '/frequency/store' => 'admin/create/frequency/StoreController',
+    // Rotas - Consulta - Posts
+    '/student/find' => 'admin/read/student/FindController'
 ];

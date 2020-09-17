@@ -37,6 +37,7 @@
 
     <div class="container d-flex flex-column justify-content-center align-items-center">
         <h1 class="display-4">Cadastro de Frequências</h1>
+        <p class="lead">Acesse o menu Consulta > Aluno e selecione um aluno para cadastrar as frequências</p>
     </div>
 </section>
 
@@ -47,11 +48,11 @@
                 <div class="form-row">
                     <div class="form-group col-md-2">
                         <label for="input-id">Matrícula</label>
-                        <input type="text" class="form-control" id="input-id" name="id_student" value="" disabled>
+                        <input type="text" class="form-control" id="input-id" name="id_student" value="<?= $studentFound->id ?? ''; ?>" readonly>
                     </div>
                     <div class="form-group col-md-10">
                         <label for="input-name">Aluno</label>
-                        <input type="text" class="form-control" id="input-name" value="" disabled>
+                        <input type="text" class="form-control" id="input-name" value="<?= $studentFound->full_name ?? ''; ?>" disabled>
                     </div>
                     <div class="form-group col-md-2">
                         <label for="input-data">Data</label>
@@ -94,7 +95,7 @@
 
     <div class="row">
         <div class="col-md-12">
-            <table class="table table-striped">
+            <table class="table table-striped" id="create-frequency">
                 <thead>
                 <tr>
                     <th scope="col">Matrícula</th>
@@ -106,11 +107,9 @@
                 </thead>
                 <tbody>
                 <?php foreach ($students as $student): ?>
-                    <tr>
+                    <tr class="list-students">
                         <td><?= $student->id; ?></td>
-                        <td>
-                            <a href="#"><?= $student->full_name; ?></a>
-                        </td>
+                        <td><?= $student->full_name; ?></td>
                         <td><?= $student->responsible; ?></td>
                         <td><?= $student->id_serie; ?></td>
                         <td><?= $student->id_room; ?></td>
